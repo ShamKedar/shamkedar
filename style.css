@@ -8,7 +8,7 @@
     --dark-green: #254F22;
 }
 
-[data-theme="blue"]{
+/* [data-theme="blue"]{
     --black: #222831;
     --orange: #00ADB5;
     --dark-green: #EEEEEE;
@@ -18,8 +18,9 @@
     .bg{
         background-color: #0C0C0C;
     }
-}
+} */
 
+/*
 body,
 html {
     height: 100%;
@@ -56,7 +57,7 @@ body {
     color: var(--white);
 }
 
-/*Navbar css*/
+/*Navbar css
 .navbar {
     position: fixed;
     top: 0;
@@ -109,7 +110,7 @@ body {
     color: var(--yellow);
 }
 
-/*Background*/
+/*Background
 .bg {
     background-color: var(--black);
     min-height: 100vh;
@@ -120,7 +121,7 @@ body {
 
 }
 
-/*name*/
+/*name
 .name {
     grid-area: name;
     color: var(--white);
@@ -150,7 +151,7 @@ body {
     color: var(--orange);
 }
 
-/*My First Image*/
+/*My First Image
 .FirstImg {
     grid-area: image;
 }
@@ -163,7 +164,7 @@ body {
     min-height: 0;
 }
 
-/*  About section */
+/*  About section 
 #about {
     display: grid;
     grid-template-columns: 1fr;
@@ -207,7 +208,7 @@ body {
     color: var(--black);
 }
 
-/*Resume Flex-box implementation */
+/*Resume Flex-box implementation 
 #resume {
     display: flex;
     gap: 20px;
@@ -229,15 +230,15 @@ body {
 
 .embedded-doc {
     width: 80%;
-    /* Set the width of the iframe */
+    /* Set the width of the iframe *
     height: 100%;
-    /* Set a specific height for the iframe */
+    /* Set a specific height for the iframe *
     border: 1px solid var(--black);
     /* Optional: adds a border */
-    /* If the browser's default PDF viewer supports it, it will be scrollable by default */
+/* If the browser's default PDF viewer supports it, it will be scrollable by default *
 }
 
-/* Project Section */
+/* Project Section 
 #projects {
     display: flex;
     gap: 20px;
@@ -310,14 +311,14 @@ button:hover {
     justify-content: center;
 }
 
-/* contact footer */
+/* contact footer 
 #contact {
     display: flex;
     gap: 20px;
     background-image: conic-gradient(var(--orange), var(--black));
     /* background-image: url("assets/desktop_bg_img.jpg");
   background-size: cover;
-  background-position: bottom;  */
+  background-position: bottom;  
 }
 
 .contactHead {
@@ -387,4 +388,316 @@ button:hover {
 .fa-github {
     background: black;
     color: white;
+}
+*/
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+section{
+    min-height: 100vh;
+    padding-top: 100px;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact {
+    min-height: 50vh;
+    padding: 10px 0;
+    background-image: url('assets/FullBg1.png');
+    color: var(--white);
+}
+
+/*Navbar css*/
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffff;
+    border-radius: 0px 0px 80px 80px;
+    z-index: 1000;
+    padding: 2%;
+    opacity: 0.9;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    color: var(--black);
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+/*.navbar ul li a:hover,*/
+header nav ul li a.active {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color: var(--white);
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/*Background*/
+.notNav {
+    background-image: linear-gradient(to top, #d8d5ca, #fffcf5);
+    border-radius: 80px 80px 0px 0px;
+    min-height: 90vh;
+}
+
+.introGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "name image";
+}
+
+/*name*/
+.name {
+    grid-area: name;
+    color: var(--black);
+    line-height: 0.0;
+    height: 300px;
+}
+
+#intro {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    padding-left: 152px;
+    padding-top: 100px;
+}
+
+#firstName {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    padding-left: 152px;
+    padding-top: 0px;
+}
+
+#lastName {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    padding-left: 152px;
+}
+
+#role {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 10;
+    font-size: 20px;
+    padding-left: 158px;
+}
+
+form {
+    display: flex;
+    /* Keeps the input and button on the same line */
+    max-width: 800px;
+}
+
+input[type="search"] {
+    flex: 1;
+    /* Makes the input field take up available space */
+    margin-left: 152px;
+    margin-top: 90px;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: #0C0C0C;
+    color: #ffff;
+}
+
+button {
+    border: none;
+    opacity: 0;
+}
+
+/*My First Image*/
+.FirstImg {
+    grid-area: image;
+}
+
+.FirstImg img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    width: 50%;
+    border-radius: 30px;
+}
+
+/*  About section */
+#about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 10px;
+    justify-items: stretch;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+    grid-auto-columns: auto;
+}
+
+.aboutHead h1 {
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+}
+
+.aboutContainer {
+    grid-area: 1 / 1 / 2 / 2;
+    height: auto;
+    justify-self: stretch;
+}
+
+.aboutHead {
+    padding: 29px 25px 2px 150px;
+    line-height: 0.2;
+}
+
+.aboutHead h3 {
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+}
+
+.para {
+    padding-top: 150px;
+    padding-left: 150px;
+    padding-right: 300px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.para span {
+    background-color: #ffff;
+    color: var(--black);
+}
+
+/*Resume Flex-box implementation */
+.box {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    flex-grow: 1;
+    padding-left: 150px;
+    width: 80%;
+}
+
+.box h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    color: var(--black);
+}
+
+.embedded-doc{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid var(--black);
+}
+
+/* Project Section */
+#projects {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.projectHeader {
+    padding-left: 150px;
+    width: 50%;
+    height: 20%;
+}
+
+.projectHeader h1 {
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+}
+
+.card1 {
+    box-shadow: 0 4px 8px 0 var(--white);
+    max-width: 300px;
+    max-height: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: var(--black);
+    color: #fffcf5;
+    border-radius: 20px;
+}
+
+.card1 button:hover {
+    font-size: 20px;
+}
+
+.card1 img{
+    border-radius: 20px 20px 0px 0px;
+    border-bottom: 10px var(--black);
+}
+
+.card1 p {
+    color: var(--dark-green);
+}
+
+.card1 h1{
+    color: #393E46;
+}
+
+.card1 button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: var(--white);
+    background-color: var(--dark-green);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 0px 0px 20px 20px;
+}
+
+button:hover {
+    color: var(--yellow);
+    background-color: var(--black);
+}
+
+.projectCards {
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
+    justify-content: center;
 }
