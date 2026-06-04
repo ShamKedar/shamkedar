@@ -53,3 +53,11 @@ window.addEventListener('scroll', () => {
     });
 
 });
+
+function PackMyBags(){
+    window.open('https://shamkedar.github.io/packmybags/', '_blank');
+};
+
+function CropCare(){
+    window.open('https://grand-llama-e54b65.netlify.app/','_blank');
+};
