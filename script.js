@@ -61,3 +61,85 @@ function PackMyBags(){
 function CropCare(){
     window.open('https://grand-llama-e54b65.netlify.app/','_blank');
 };
+
+//Code of bot
+const sendBtn = document.getElementById("sendBtn");
+const userInput = document.getElementById("userInput");
+const chatContainer = document.getElementById("FirstImg");
+
+sendBtn.addEventListener("click", sendMessage);
+
+// Press Enter to send
+userInput.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        sendMessage();
+    }
+});
+
+async function sendMessage() {
+
+    const question = userInput.value.trim();
+
+    if (question === "") return;
+
+    // Display user message
+    addMessage(question, "user");
+
+    userInput.value = "";
+
+    // Show typing message
+    const typingDiv = addMessage("Typing...", "bot");
+
+    try {
+
+        const response = await fetch("http://127.0.0.1:5000/chat", {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                question: question
+            })
+
+        });
+
+        if (!response.ok) {
+            throw new Error("Server Error");
+        }
+
+        const data = await response.json();
+
+        typingDiv.innerHTML = data.answer;
+
+    } catch (error) {
+
+        typingDiv.innerHTML = "Unable to connect to the chatbot.";
+
+        console.error(error);
+    }
+
+}
+
+function addMessage(message, sender) {
+
+    const div = document.createElement("div");
+
+    div.classList.add("message");
+
+    if (sender === "user") {
+        div.classList.add("user-message");
+    } else {
+        div.classList.add("bot-message");
+    }
+
+    div.innerHTML = message;
+
+    chatContainer.appendChild(div);
+
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+
+    return div;
+}

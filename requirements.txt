@@ -1,0 +1,8 @@
+flask
+flask-cors
+sentence-transformers
+qdrant-client
+openai
+python-dotenv
+torch
+transformers

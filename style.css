@@ -461,7 +461,13 @@ header nav ul li a.active {
 /*Background*/
 .notNav {
     background-image: linear-gradient(to top, #d8d5ca, #fffcf5);
-    border-radius: 80px 80px 50px 50px;
+    border-radius: 80px 80px 40px 40px;
+    min-height: 90vh;
+}
+
+.notNavForContact {
+    background-image: linear-gradient(to top, #d8d5ca, #fffcf5);
+    border-radius: 80px 80px 0px 0px;
     min-height: 90vh;
 }
 
@@ -593,11 +599,6 @@ button {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.para span {
-    background-color: #ffff;
-    color: var(--black);
-}
-
 /*Resume Flex-box implementation */
 .box {
     display: flex;
@@ -715,7 +716,6 @@ button {
   
 }
 
-
 /* Make the text visible when hovering over the parent container */
 .column:hover .hover-text {
   transition-delay: 0.5s;
@@ -723,53 +723,141 @@ button {
   opacity: 1;
 }
 
-/* contact footer */
-#contact {
-    min-height: 50vh;
-    padding: 10px 0;
+/* Contact Section*/
+.contactForm{
+    border:2px solid #C8A96B;
+    border-radius:35px;
+    padding:35px 45px;
+    background-image: linear-gradient(to top, #d8d5ca, #fffcf5);
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Form Layout */
+.contactForm form{
+    display:grid;
+    grid-template-columns: 1fr 350px;
+    gap:30px;
+}
+
+/* Left side */
+.left-fields{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* Message on right */
+.message-field{
+    display:flex;
+    flex-direction:column;
+}
+
+.message-field textarea{
+    width:100%;
+    height:170px;
+}
+
+/* Button spans both columns */
+#sendBtn{
+    grid-column:1 / 3;
+    justify-self:center;
+    width:320px;
+    padding:15px;
+    border:none;
+    border-radius:12px;
+    background:#C8A96B;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    border-radius:50px;
+    transition:.3s;
+}
+
+#sendBtn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(200,169,107,.45);
     color: var(--black);
-    display: flex;
-    gap: 20px;
-    background-color: rgb(255, 255, 255);
-    /* background-image: url("assets/desktop_bg_img.jpg"); */
-  background-size: cover;
-  background-position: bottom;  
 }
 
-.contactHead {
-    width: 60%;
-    height: 100%;
-    padding-left: 150px;
+.field input{
+    width:350px;
+    padding:12px;
+    border-radius:50px;
 }
 
-.contactHead h1 {
-    font-size: 20px;
+.field textarea{
+    padding:12px;
+    resize:none;
+    border-radius:20px;
 }
 
-.contactHead p {
-    font-size: 15px;
+/* Hover Effect */
+.field input:hover,
+.field textarea:hover{
+    border-color:#C8A96B;
 }
 
-.explore,
+/* Focus Effect */
+.field input:focus,
+.field textarea:focus{
+    border-color:#C8A96B;
+    box-shadow:0 0 10px rgba(200,169,107,0.4);
+    background:#fff;
+}
+
+/* Placeholder */
+.field input::placeholder,
+.field textarea::placeholder{
+    color:#999;
+}
+
+/* Button Click */
+#sendBtn:active{
+    transform:translateY(0);
+}
+
+/* Responsive */
+@media(max-width:900px){
+
+    .contactForm form{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .field input,
+    .field textarea{
+        width:100%;
+    }
+
+    #sendBtn{
+        width:100%;
+    }
+}
+
 .social {
-    width: 20%;
-    height: 100%;
+  grid-area: 3 / 1 / 4 / 2;
+    align-self: center;
+  justify-self: center;
 }
 
-.explore ul {
-    list-style: none;
+.contactHeader h1{
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 60px;
+    padding-left: 150px;
+    padding-top: 40px;
 }
 
-.explore ul li a {
-    text-decoration: none;
-    line-height: 30px;
-    font-size: 20px;
-    font-style: italic;
-}
-
-.explore ul li a:hover {
-    font-size: 30px;
-    font-style: normal;
+#sendBtn{
+    background-color: #C8A96B;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
 }
 
 .fa {
@@ -789,22 +877,21 @@ button {
 }
 
 .fa-reddit {
-    background: #ff5700;
+    background: linear-gradient(to top, #DD9E59, #eacb5a);
     color: white;
-    
 }
 
 .fa-instagram {
-    background: linear-gradient(to right, orange, red, purple);
+    background: linear-gradient(to right, #DD9E59, #d4c06e);
     color: white;
 }
 
 .fa-linkedin {
-    background: #007bb5;
+    background: linear-gradient(to right, #deae7b, #e1c13e);
     color: white;
 }
 
 .fa-github {
-    background: black;
-    color: white;
+    background: linear-gradient(to right, #DD9E59, #dfbd39);
+    color: var(--black);
 }
