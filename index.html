@@ -7,103 +7,172 @@
     <title>Porfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a619ca1148.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <section id="home">
-        <div class="bg">
-            <div class="navbar">
-                <nav>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#resume">Resume</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a><button id="toggle-theme">Change Theme</button></a></li>
-                    </ul>
-                </nav>
-            </div>
+    <div class="navbar">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 
-            <div class="name">
-                <h2 id="firstName">SHAM</h2>
-                <h1 id="lastName">KEDAR</h1>
-                <h3 id="statement">Just a Tech</h3>
-            </div>
-            <div class="FirstImg">
-                <img src="assets\myImg.jpeg">
+    <section id="home">
+        <div class="notNav">
+            <div class="introGrid">
+                <div class="name">
+                    <h3 id="intro">Hi, I'm</h3>
+                    <h2 id="firstName">SHAM KEDAR</h2>
+                    <h6 id="role">Data Analyst | AI Engineer</h6>
+                    <!--
+                    <search>
+                        <form action="/search-results" method="get">
+                            <input type="search" id="site-search" name="q" placeholder="What you want to know...">
+                            <button type="submit" id="sendBtn" hidden></button>
+                        </form>
+                    </search>
+                -->
+                </div>
+
+                <div class="FirstImg" id="FirstImg">
+                    <img src="assets\ProImg.png">
+                </div>
             </div>
         </div>
     </section>
 
     <section id="about">
-        <div class="aboutContainer">
-            <div class="aboutHead">
-                <h1>ABOUT</h1>
-                <h3>shamkdar23@gmail.com</h3>
-            </div>
+        <div class="notNav">
+            <div class="about-container">
+                <div class="aboutHead">
+                    <h1>ABOUT</h1>
+                    <h3>Sham Kedar</h3>
+                </div>
 
-            <div class="para">
-                <p class="aboutPara">Hi! <br>I am Sham Kedar. <br>I am currentlys studying in 3rd year. <br>I did some projects related to <span>Machine Learning</span>, for such projects I did the data related operations like <span>exploraing,analyzing,cleaning,etc </span>, also worked on making beautiful ui/ux for the project.</p>
+                <div class="para">
+                    <p class="aboutPara">I am Sham Kedar.I am currentlys studying in 4th year.I did some
+                        projects related to Machine Learning, for such projects I did the data related
+                        operations like exploraing,analyzing,cleaning,etc.</p>
+                </div>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experiances')">Experiances</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>SQL</span><br>Data filtering in BigQuery and MySQL</li>
+                        <li><span>PowerBI / Looker / Excel</span><br>Visualization and data transformations</li>
+                        <li><span>Python</span><br>Perfroming EDA</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experiances">
+                    <ul>
+                        <li><span>Project Tour Guide</span><br>Worked on api, excel data</li>
+                        <li><span>Project Crop Care</span><br>Crop recommendations and Disease prediction using ML and
+                            DL</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2023-27</span><br>B.Tech from KIT College of Engineering, Kolhapur</li>
+                        <li><span>2021-22</span><br>12th from Jay Bhavani College, Gadhi</li>
+                        <li><span>2019-20</span><br>10th from Bhagwan Vidyalay, Beed</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-
-    <section id="resume">
-        <div class="box">
-            <h1>Resume</h1>
-            <iframe src="assets/Resume.pdf" class="embedded-doc"></iframe>
-        </div>
-    </section>
-
     <section id="projects">
-        <div class="projectHeader">
-            <h1>Projects</h1>
+        <div class="notNav">
+            <div class="projectHeader">
+                <h1>My Work</h1>
+            </div>
+            <div class="project-list">
+                <div class="project">
+                    <img src="assets/map.jpg">
+                    <div class="layer">
+                        <h3>Pack My Bags</h3>
+                        <p>This project is about helping the user to plan the trip by suggesting the nearest tourist
+                            spots along their destination route.</p>
+                        <a href="https://shamkedar.github.io/packmybags/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="assets/smartAgri.jpg">
+                    <div class="layer">
+                        <h3>Crop Care</h3>
+                        <p>This project is about helping the Indian in Weather Forecast Crop Export , Soil Analysis and
+                            Crop disease setection.</p>
+                        <a href="https://grand-llama-e54b65.netlify.app/"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project">
+                    <img src="assets/PowerBi.jpg">
+                    <div class="layer">
+                        <h3>PowerBI Practice</h3>
+                        <p>This is the link to the PowerBI repo conatinig my practice work.</p>
+                        <a href="https://github.com/ShamKedar/PowerBI-Practice"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="projectCards">
-            <div class="column">
-                <div class="card1">
-                    <img src="assets/map.jpg" alt="Pack My Bags" style="width: 300px; height: 200px;">
-                    <h1>Pack My Bags</h1>
-                    <p>This project is about helping the user to plan the trip by suggesting the nearest tourist spots
-                        along their destination route.</p>
-                    <a href="https://shamkedar.github.io/packmybags/"><button>See Project</button></a>
+    </section>
+    <section id="contact">
+        <div class="notNavForContact">
+            <div class="container">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> shamkdar23@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/sham-kedar-3681a7299"><i class="fa-brands fa-square-linkedin"></i></a>
+                        <a href="https://www.instagram.com/sham_kedar10?igsh=NG9yNnFndGZrbW5j"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/ShamKedar"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://x.com/ShamKedar"><i class="fa-brands fa-x-twitter"></i></a>
+                    </div>
+                    <a href="./assets/Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="contact-form">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea><br>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
                 </div>
             </div>
-            <div class="column">
-                <div class="card1">
-                    <img src="assets/agri.jpg" alt="Pack My Bags" style="width: 300px; height: 200px;">
-                    <h1>Crop Care</h1>
-                    <p>This project is about helping the Indian in Weather Forecast, Crop Export , Soil Analysis and
-                        Crop disease setection.</p>
-                    <a href="https://grand-llama-e54b65.netlify.app/"><button>See Project</button></a>
-                </div>
-            </div>
+        </div>
     </section>
 
-    <section id="contact">
-        <div class="contactHead">
-            <h1>Sham Kedar</h1>
-            <p>Phone No. : +91 7840921052</p>
-            <p>Email : shamkdar23@gmail.com</p>
-        </div>
-        <div class="explore">
-            <h1>Explore</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#projects">Projects</a></li>
-            </ul>
-        </div>
-        <div class="social">
-            <h1>Social Media</h1>
-            <a href="#" class="fa fa-linkedin"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-reddit"></a>
-            <a href="#" class="fa fa-github"></a>
-        </div>
-    </section>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyL7vEmRq7RLZ83yjCwJRiuTPGg96FC0gDKKez1G0pvkCWrD6MpG1wsKNxsPqZtiUMzvA/exec'
+        const form = document.forms['contact-form']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => response.json())
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!"
+                    setTimeout(function(){
+                        msg.innerHTML = ""
+                    }, 3000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
     <script src="script.js"></script>
 </body>
 
