@@ -1,28 +1,3 @@
-/*const toggleBtn = document.getElementById('toggle-theme');
-
-// Apply stored theme on load
-document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'light');
-
-toggleBtn.addEventListener('click', () => {
-    let newTheme = document.documentElement.getAttribute('data-theme') === 'blue' ? 'light' : 'blue';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-});
-
-/* NOT WORKING
-$(function(){
-    var $page = jQuery.url.attr("file");
-    $('.navbar ul li a').each(function(){
-        var $href = $(this).attr('href');
-        if ( ($href == $page) || ($href == '') ) {
-            $(this).addClass('on');
-        } else {
-            $(this).removeClass('on');
-        }
-    });
-});
-*/
-
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav ul li a');
 
@@ -54,14 +29,22 @@ window.addEventListener('scroll', () => {
 
 });
 
-function PackMyBags(){
-    window.open('https://shamkedar.github.io/packmybags/', '_blank');
-};
+//About section tab view
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
 
-function CropCare(){
-    window.open('https://grand-llama-e54b65.netlify.app/','_blank');
-};
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link")
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
 
+/*
 //Code of bot
 const sendBtn = document.getElementById("sendBtn");
 const userInput = document.getElementById("userInput");
@@ -143,3 +126,4 @@ function addMessage(message, sender) {
 
     return div;
 }
+    */

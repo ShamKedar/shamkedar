@@ -9,389 +9,6 @@
     --mid-green: #5b7e3c;
 }
 
-/* [data-theme="blue"]{
-    --black: #222831;
-    --orange: #00ADB5;
-    --dark-green: #EEEEEE;
-    --white: #dedede;
-    --yellow: rgb(56, 197, 225);
-    --dark-green: #00adb5;
-    .bg{
-        background-color: #0C0C0C;
-    }
-} */
-
-/*
-body,
-html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-#home {
-    flex: 1 0 100vh;
-    min-height: 100vh;
-}
-
-#about,
-#resume,
-#projects,
-#certification {
-    min-height: 100vh;
-    padding: 10px 0;
-    background-color: var(--black);
-    color: var(--white);
-}
-
-#contact {
-    min-height: 50vh;
-    padding: 10px 0;
-    background-color: var(--black);
-    color: var(--white);
-}
-
-/*Navbar css
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 30px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-image: linear-gradient(to right, var(--black), var(--orange));
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    z-index: 1000;
-    padding: 1%;
-    opacity: 0.9;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 24px;
-    margin: 0;
-    padding: 0;
-}
-
-.navbar ul li {
-    display: inline-block;
-}
-
-.navbar ul li a{
-    color: var(--white);
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: larger;
-}
-
-.navbar button{
-    background-color: transparent;
-    border: none;
-    color: var(--white);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 18px;
-}
-
-.navbar button:hover{
-    background-color: transparent;
-}
-
-.navbar ul li a:hover {
-    color: var(--yellow);
-}
-
-/*Background
-.bg {
-    background-color: var(--black);
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "name image";
-
-}
-
-/*name
-.name {
-    grid-area: name;
-    color: var(--white);
-    line-height: 0.0;
-    height: 500px;
-}
-
-#firstName {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    font-size: 80px;
-    padding-left: 152px;
-    padding-top: 150px;
-}
-
-#lastName {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    font-size: 129.44px;
-    padding-left: 150px;
-}
-
-#statement {
-    font-family: 'Times New Roman', Times, serif;
-    letter-spacing: 20px;
-    padding-left: 160px;
-    color: var(--orange);
-}
-
-/*My First Image
-.FirstImg {
-    grid-area: image;
-}
-
-.FirstImg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    min-height: 0;
-}
-
-/*  About section 
-#about {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 10px 10px;
-    justify-items: stretch;
-    align-items: stretch;
-    justify-content: center;
-    align-content: center;
-    grid-auto-columns: auto;
-}
-
-.aboutHead h1 {
-    color: var(--orange);
-    font-size: 50px;
-}
-
-.aboutContainer{
-    grid-area: 1 / 1 / 2 / 2;
-    height: auto;
-    justify-self: stretch;
-}
-
-.aboutHead{
-    padding: 29px 25px 2px 150px;
-    line-height: 0.2;
-}
-
-.aboutHead h3{
-    color: var(--yellow);
-}
-
-.para{
-    padding-top: 150px;
-    padding-left: 150px;
-    padding-right: 300px;
-}
-
-.para span{
-    background-color: var(--yellow);
-    color: var(--black);
-}
-
-/*Resume Flex-box implementation 
-#resume {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-    color: var(--white);
-}
-
-.box {
-    width: 100%;
-    height: 100%;
-    flex-grow: 1;
-    padding-left: 150px;
-}
-
-.box h1 {
-    color: var(--orange);
-    font-size: 50px;
-}
-
-.embedded-doc {
-    width: 80%;
-    /* Set the width of the iframe *
-    height: 100%;
-    /* Set a specific height for the iframe *
-    border: 1px solid var(--black);
-    /* Optional: adds a border */
-/* If the browser's default PDF viewer supports it, it will be scrollable by default *
-}
-
-/* Project Section 
-#projects {
-    display: flex;
-    gap: 20px;
-    flex-direction: column;
-}
-
-.projectHeader {
-    padding-left: 150px;
-    width: 50%;
-    height: 20%;
-}
-
-.projectHeader h1 {
-    color: var(--orange);
-    font-size: 50px;
-}
-
-.card1 {
-    box-shadow: 0 4px 8px 0 var(--white);
-    max-width: 300px;
-    max-height: 500px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-    background-color: var(--white);
-    color: var(--dark-green);
-    border-radius: 20px;
-}
-
-.card1 button:hover {
-    font-size: 20px;
-}
-
-.card1 img{
-    border-radius: 20px 20px 0px 0px;
-    border-bottom: 10px var(--black);
-}
-
-.card1 p {
-    color: var(--dark-green);
-}
-
-.card1 h1{
-    color: #393E46;
-}
-
-.card1 button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: var(--white);
-    background-color: var(--dark-green);
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-    border-radius: 0px 0px 20px 20px;
-}
-
-button:hover {
-    color: var(--yellow);
-    background-color: var(--black);
-}
-
-.projectCards {
-    display: flex;
-    gap: 50px;
-    flex-direction: row;
-    justify-content: center;
-}
-
-/* contact footer 
-#contact {
-    display: flex;
-    gap: 20px;
-    background-image: conic-gradient(var(--orange), var(--black));
-    /* background-image: url("assets/desktop_bg_img.jpg");
-  background-size: cover;
-  background-position: bottom;  
-}
-
-.contactHead {
-    width: 60%;
-    height: 100%;
-    padding-left: 150px;
-}
-
-.contactHead h1 {
-    font-size: 50px;
-}
-
-.explore,
-.social {
-    width: 20%;
-    height: 100%;
-}
-
-.explore ul {
-    list-style: none;
-}
-
-.explore ul li a {
-    text-decoration: none;
-    color: var(--white);
-    line-height: 30px;
-    font-size: 20px;
-    font-style: italic;
-}
-
-.explore ul li a:hover {
-    font-size: 30px;
-    font-style: normal;
-}
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 20px;
-    height: 20px;
-    text-decoration: none;
-    text-align: center;
-    margin: 5px 2px;
-    border-radius: 50%;
-}
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-reddit {
-    background: #ff5700;
-    color: white;
-    border-radius: 50%;
-}
-
-.fa-instagram {
-    background: linear-gradient(to right, orange, red, purple);
-    color: white;
-}
-
-.fa-linkedin {
-    background: #007bb5;
-    color: white;
-}
-
-.fa-github {
-    background: black;
-    color: white;
-}
-*/
-
 body,
 html {
     height: 100%;
@@ -516,30 +133,6 @@ header nav ul li a.active {
     padding-left: 158px;
 }
 
-form {
-    display: flex;
-    /* Keeps the input and button on the same line */
-    max-width: 800px;
-}
-
-input[type="search"] {
-    flex: 1;
-    /* Makes the input field take up available space */
-    margin-left: 152px;
-    margin-top: 90px;
-    padding: 20px;
-    border: none;
-    border-radius: 30px;
-    outline: none;
-    background-color: #0C0C0C;
-    color: #ffff;
-}
-
-button {
-    border: none;
-    opacity: 0;
-}
-
 /*My First Image*/
 .FirstImg {
     grid-area: image;
@@ -555,16 +148,11 @@ button {
 }
 
 /*  About section */
-#about {
+.about-container{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 10px 10px;
-    justify-items: stretch;
-    align-items: stretch;
-    justify-content: center;
-    align-content: center;
-    grid-auto-columns: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 10px;
 }
 
 .aboutHead h1 {
@@ -573,14 +161,8 @@ button {
     font-weight: 100;
     font-size: 60px;
 }
-
-.aboutContainer {
-    grid-area: 1 / 1 / 2 / 2;
-    height: auto;
-    justify-self: stretch;
-}
-
 .aboutHead {
+    grid-area: 1 / 1 / 2 / 2;
     padding: 29px 25px 2px 150px;
     line-height: 0.2;
 }
@@ -593,33 +175,65 @@ button {
 }
 
 .para {
-    padding-top: 150px;
+    grid-area: 2 / 1 / 3 / 2;
+    align-self: center;
+    justify-self: center;
     padding-left: 150px;
-    padding-right: 300px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/*Resume Flex-box implementation */
-.box {
+.tab-titles{
+    grid-area: 1 / 2 / 2 / 3;
+    justify-self: center;
+  align-self: end;
     display: flex;
-    gap: 20px;
-    flex-direction: column;
-    flex-grow: 1;
-    padding-left: 150px;
-    width: 80%;
+    margin: 20px 0px 40px;
 }
 
-.box h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    font-size: 60px;
-    color: var(--black);
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
 }
 
-.embedded-doc{
-    width: 100%;
-    height: 55vh;
-    border: 1px solid var(--black);
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #481E14;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 50%;
+}
+
+.tab-contents{
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: start;
+    justify-self: start;
+    padding-left: 100px;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tab-contents ul li span{
+    color: #481E14;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
 }
 
 /* Project Section */
@@ -642,256 +256,141 @@ button {
     font-size: 60px;
 }
 
-.column {
-    box-shadow: 0 4px 8px 0 var(--white);
-    max-width: 300px;
-    max-height: 500px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
-    background-color: white;
-    color: var(--black);
-    border-radius: 20px;
-    transition: transform 0.2s ease;
+.project-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
 }
-
-.column:hover {
-    cursor: pointer;
-    transform: scale(1.07);
+.project{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
 }
-
-.column img{
-    border-radius: 20px 20px 0px 0px;
-    border-bottom: 10px var(--black);
+.project img{
+    width: 100%;
+    border: 10px;
+    display: block;
+    transition: transform 0.5s;
 }
-
-.column p {
-    color: var(--dark-green);
-}
-
-.column h1{
-    color: #393E46;
-}
-
-.projectCards {
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgb(207, 235, 255, 0.6), #FFFCE1);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
     display: flex;
-    gap: 50px;
-    flex-direction: row;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+    color: var(--black);
 }
-
-/* Position the container relative to align the hover text box */
-.column {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  font-weight: bold;
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
 }
-
-.column .hover-text {
-  visibility: hidden;
-  background-color: var(--mid-green);
-  color: white;
-  position: absolute;
-  z-index: 1;
-  top: 102%;
-  left: 50%;
-  transform: translateX(-50%);
-  
-  /* Size Minimisation Properties */
-  font-size: 12px;          /* Shrinks the text size */
-  padding: 4px 8px;         /* Tightens internal spacing */
-  max-width: 220px;         /* Restricts the maximum width */
-  line-height: 1.2;         /* Reduces vertical line height */
-  text-align: center;  
-  border-radius: 20px;     
-  
-  /* Layout Controls (Pick One) */
-  /*white-space: nowrap;      /* Force text into a single ultra-short line */
-  word-break: break-all;  /* Un-comment if you want long single words to split */
-
-  /* Smooth fade-in transition */
-  opacity: 0;
-  transition: opacity 0.3s;
-  
+.layer a{
+    margin-top: 20px;
+    color: #9B3922;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
 }
-
-/* Make the text visible when hovering over the parent container */
-.column:hover .hover-text {
-  transition-delay: 0.5s;
-  visibility: visible;
-  opacity: 1;
+.project:hover img{
+    transform: scale(1.1);
+}
+.project:hover .layer{
+    height: 100%;
 }
 
 /* Contact Section*/
-.contactForm{
-    border:2px solid #C8A96B;
-    border-radius:35px;
-    padding:35px 45px;
-    background-image: linear-gradient(to top, #d8d5ca, #fffcf5);
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+.container{
+    display: flex;
+  gap: 20px;
 }
-
-/* Form Layout */
-.contactForm form{
-    display:grid;
-    grid-template-columns: 1fr 350px;
-    gap:30px;
+.contact-left{
+      width: auto;
+  height: auto;
+    padding: 10px 0 0 150px;
+      flex-basis: 50%;
 }
-
-/* Left side */
-.left-fields{
-    display:flex;
-    flex-direction:column;
-    gap:25px;
+.contact-right{
+    width: auto;
+  height: auto;
+    align-self: flex-end;
+    flex-basis: 50%;
 }
-
-/* Message on right */
-.message-field{
-    display:flex;
-    flex-direction:column;
-}
-
-.message-field textarea{
-    width:100%;
-    height:170px;
-}
-
-/* Button spans both columns */
-#sendBtn{
-    grid-column:1 / 3;
-    justify-self:center;
-    width:320px;
-    padding:15px;
-    border:none;
-    border-radius:12px;
-    background:#C8A96B;
-    color:white;
-    font-size:20px;
-    cursor:pointer;
-    border-radius:50px;
-    transition:.3s;
-}
-
-#sendBtn:hover{
-    transform:translateY(-4px);
-    box-shadow:0 10px 25px rgba(200,169,107,.45);
-    color: var(--black);
-}
-
-.field input{
-    width:350px;
-    padding:12px;
-    border-radius:50px;
-}
-
-.field textarea{
-    padding:12px;
-    resize:none;
-    border-radius:20px;
-}
-
-/* Hover Effect */
-.field input:hover,
-.field textarea:hover{
-    border-color:#C8A96B;
-}
-
-/* Focus Effect */
-.field input:focus,
-.field textarea:focus{
-    border-color:#C8A96B;
-    box-shadow:0 0 10px rgba(200,169,107,0.4);
-    background:#fff;
-}
-
-/* Placeholder */
-.field input::placeholder,
-.field textarea::placeholder{
-    color:#999;
-}
-
-/* Button Click */
-#sendBtn:active{
-    transform:translateY(0);
-}
-
-/* Responsive */
-@media(max-width:900px){
-
-    .contactForm form{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .field input,
-    .field textarea{
-        width:100%;
-    }
-
-    #sendBtn{
-        width:100%;
-    }
-}
-
-.social {
-  grid-area: 3 / 1 / 4 / 2;
-    align-self: center;
-  justify-self: center;
-}
-
-.contactHeader h1{
+.contact-left h1{
     color: var(--black);
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
     font-size: 60px;
-    padding-left: 150px;
-    padding-top: 40px;
 }
-
-#sendBtn{
-    background-color: #C8A96B;
-  color: white;
-  padding: 16px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
+.contact-left p{
+    margin-top: 30px;
 }
-
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 20px;
-    height: 20px;
+.contact-left p i{
+    color: #481E14;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
     text-decoration: none;
-    text-align: center;
-    margin: 5px 2px;
-    border-radius: 50%;
-    transition: transform 0.2s ease;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
 }
-
-.fa:hover {
-    transform: scale(1.1);
+.social-icons a:hover{
+    color: #481E14;
+    transform: translateY(-5px);
 }
-
-.fa-reddit {
-    background: linear-gradient(to top, #DD9E59, #eacb5a);
-    color: white;
+.btn.btn2{
+    display: inline-block;
+    background: #000000;
+    color: #dedede;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
 }
-
-.fa-instagram {
-    background: linear-gradient(to right, #DD9E59, #d4c06e);
-    color: white;
+.contact-right form{
+    width: auto;
 }
-
-.fa-linkedin {
-    background: linear-gradient(to right, #deae7b, #e1c13e);
-    color: white;
+form input, form textarea{
+    width: 50%;
+    border: 0px;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
 }
-
-.fa-github {
-    background: linear-gradient(to right, #DD9E59, #dfbd39);
-    color: var(--black);
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#msg{
+    color: #000000;
+    margin-top: 20px;
+    display: block;
 }
