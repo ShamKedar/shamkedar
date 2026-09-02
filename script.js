@@ -29,6 +29,16 @@ window.addEventListener('scroll', () => {
 
 });
 
+const projectList = document.querySelector('.project-list');
+if (projectList) {
+    const cards = Array.from(projectList.children);
+    cards.forEach((card) => {
+        const clone = card.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        projectList.appendChild(clone);
+    });
+}
+
 //About section tab view
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
