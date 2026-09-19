@@ -23,7 +23,8 @@ I am currently discovering on Cloud Computing.
 ### My projects and learning through them
 | Project Name | Learning | Repo/Demo Link |
 | --- | --- | --- |
-| Tyre Retail Intelligence | Python, SQL and PowerBI | [Data Portfolio](https://github.com/ShamKedar/Tyre-Retail-Intelligence) |
+| Tyre Retail Intelligence | Python, SQL and PowerBI | [Tyre Retail Intelligence](https://github.com/ShamKedar/Tyre-Retail-Intelligence) |
+| A/B Testing Analytics: Landing Page Experiment | Python, SQL, PowerBI and DAX | [A/B Testing Analytics](https://github.com/ShamKedar/A-B-Testing-Analytics-Landing-Page-Experiment) |
 | Semantic Search in CCTV | Implemented YOLO and LLM | --- |
 | Crop Care | Transfer Learning | [CropCare](https://github.com/ShamKedar/Farmers_Helper) |
 | Pack My Bags | API implementation | [PackMyBags](https://shamkedar.github.io/packmybags/) |
